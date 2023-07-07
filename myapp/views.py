@@ -1,7 +1,7 @@
 from django.shortcuts import render  # render, get_object_or_404,
-from django.http import HttpResponse, JsonResponse  # , HttpResponseRedirect
+from django.http import HttpResponse, JsonResponse
 from .models import Project, Task  # Create your models here.
-from django.shortcuts import get_object_or_404  # get_object_or_40
+from django.shortcuts import get_object_or_404, render  # get_object_or_40
 
 # Create your views here.
 
@@ -15,7 +15,7 @@ def about(request):
 
 
 def index(request):
-    return HttpResponse("<h1>Index</h1>")
+    return HttpResponse(request, "index")
 
 
 def projects(request):
